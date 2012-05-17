@@ -17,6 +17,8 @@ if config['omniauth']
       gem 'omniauth-google'
     when 'tumblr'
       gem 'omniauth-tumblr'
+    when 'mailchimp'
+      gem 'omniauth-mailchimp'
   end
 else
   recipes.delete('omniauth')
@@ -189,4 +191,4 @@ config:
   - provider:
       type: multiple_choice
       prompt: "Which service provider will you use?"
-      choices: [["Twitter", twitter], ["Facebook", facebook], ["GitHub", github], ["LinkedIn", linkedin], ["Google", google], ["Tumblr", tumblr]]
+      choices: [["Twitter", twitter], ["Facebook", facebook], ["GitHub", github], ["LinkedIn", linkedin], ["Google", google], ["Tumblr", tumblr], ["Mailchimp", mailchimp]]      
